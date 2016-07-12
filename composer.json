@@ -20,7 +20,7 @@
   },
   "autoload": {
     "psr-0": {
-      "Newband\\Baidu\\Fanyi": "src"
+      "Newband\\Baidu\\Translate": "src"
     },
     "exclude-from-classmap": [
       "/Tests/"
