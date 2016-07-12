@@ -5,11 +5,11 @@
 
 ### Installation
 
-First add the dependencie to your `composer.json` file:
+First add the dependencies to your `composer.json` file:
 
     "require": {
         ...
-        "newband/baidu-translate-bundle": "~1.0"
+        "newband/baidu-translate-bundle": "dev-master"
     },
 
 Then install the bundle with the command:
@@ -37,3 +37,7 @@ Enable the bundle in your application kernel:
     newband_baidu_translate:
         app: app id
         secret: secret key
+        
+### Usage
+
+    $result = $this->get('newband.baidu.translator')->translate('上海');

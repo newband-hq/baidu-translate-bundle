@@ -3,10 +3,10 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <parameters>
-        <parameter key="newband.baidu.translate.translator.class">Newband\Baidu\Translate\Translator\Translator</parameter>
+        <parameter key="newband.baidu.translator.class">Newband\Baidu\Translate\Translator\Translator</parameter>
     </parameters>
     <services>
-        <service id="newband.baidu.translate.translator" class="%newband.baidu.translate.translator.class%">
+        <service id="newband.baidu.translator" class="%newband.baidu.translator.class%">
             <argument type="service" id="newband.baidu.translate.client"/>
         </service>
     </services>
