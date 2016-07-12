@@ -1,4 +1,4 @@
-# Newband Baidu translate Bundle
+# Newband Baidu Translate Bundle
 
 ### Version
 1.0.0
