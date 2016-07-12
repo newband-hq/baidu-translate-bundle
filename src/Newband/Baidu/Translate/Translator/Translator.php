@@ -71,7 +71,7 @@ class Translator implements TranslatorInterface
     public function translate($query, $from, $to)
     {
         try {
-            $response = $this->client->request($query, $from, $to);
+            $response = $this->client->request($query, $from = self::LANG_AUTO, $to = self::LANG_ENGLISH);
             $content = json_decode($response->getBody()->getContents(), true);
             if ($content['trans_result']) {
                 return $content['trans_result'][0]['dst'];
