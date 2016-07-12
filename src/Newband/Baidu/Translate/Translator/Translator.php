@@ -73,7 +73,7 @@ class Translator implements TranslatorInterface
         try {
             $response = $this->client->request($query, $from, $to);
             $content = json_decode($response->getBody()->getContents(), true);
-            if ($content['trans_result']) {
+            if (isset($content['trans_result'])) {
                 return $content['trans_result'][0]['dst'];
             }
             if (isset($content['error_code'])) {

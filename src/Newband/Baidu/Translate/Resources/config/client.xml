@@ -7,8 +7,8 @@
     </parameters>
     <services>
         <service id="newband.baidu.translate.client" class="%newband.baidu.translate.client.class%">
-            <argument />
-            <argument />
+            <argument>%newband.baidu.translate.app%</argument>
+            <argument>%newband.baidu.translate.secret%</argument>
         </service>
     </services>
 </container>
