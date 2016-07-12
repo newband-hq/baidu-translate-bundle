@@ -68,10 +68,10 @@ class Translator implements TranslatorInterface
     /**
      * {@inheritdoc}
      */
-    public function translate($query, $from, $to)
+    public function translate($query, $from = self::LANG_AUTO, $to = self::LANG_ENGLISH)
     {
         try {
-            $response = $this->client->request($query, $from = self::LANG_AUTO, $to = self::LANG_ENGLISH);
+            $response = $this->client->request($query, $from, $to);
             $content = json_decode($response->getBody()->getContents(), true);
             if ($content['trans_result']) {
                 return $content['trans_result'][0]['dst'];
