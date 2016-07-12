@@ -21,10 +21,10 @@ class Configuration implements ConfigurationInterface
         $rootNode = $treeBuilder->root('newband_baidu_translate');
         $rootNode
             ->children()
-                ->scalarNode('appid')
+                ->scalarNode('app')
                     ->isRequired()
                 ->end()
-                ->scalarNode('secretKey')
+                ->scalarNode('secret')
                     ->isRequired()
                 ->end()
             ->end();

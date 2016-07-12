@@ -22,12 +22,12 @@ class NewbandBaiduTranslateExtension extends Extension
     {
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
-        $container->setParameter('newband.baidu.translate.appid', $config['appid']);
-        $container->setParameter('newband.baidu.translate.secretKey', $config['secretKey']);
+        $container->setParameter('newband.baidu.translate.app', $config['app']);
+        $container->setParameter('newband.baidu.translate.secret', $config['secret']);
 
         $clientDef = new DefinitionDecorator('newband.baidu.translate.client');
-        $clientDef->replaceArgument(0, $config['appid']);
-        $clientDef->replaceArgument(1, $config['secretKey']);
+        $clientDef->replaceArgument(0, $config['app']);
+        $clientDef->replaceArgument(1, $config['secret']);
 
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('client.xml');
